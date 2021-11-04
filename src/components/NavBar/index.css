@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background: orangered;
+    height: 50px;
+    display: flexbox;
+    padding: 0.2rem;
+}
+.logo{
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 20px;
+    display: flexbox;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.navBar ul{
+    list-style: none;
+    border:0px 1px solid #fff;
+}
+.navBar ul li {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    float: right;
+    margin-right: 25px;
+}
+
+  
