@@ -1,6 +1,5 @@
-const Button = (props) => {
+export const Button = (props) => {
     return (
         <button type={props.type}>Login</button>
     )
 }
-export default Button;

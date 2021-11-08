@@ -1,0 +1,28 @@
+.btn{
+    font-family: 'Zen Antique', serif;
+    background-color:#22242d;
+    border-color: #22242d;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 0.10rem 0.60rem;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color:#fff ;
+    border-color: #fff;
+}
+
+.react-icons {
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+}
+
+.react-icons:hover {
+    vertical-align: middle;
+    background-color:#22242d;
+    border-color: #22242d;
+}
+
+

@@ -1,11 +1,12 @@
-import NavBar from './components/NavBar/NavBar.jsx';
-import Login from './screens/Login/Login.jsx';
+import BarraNav from './components/NavBar/BarraNav.jsx';
 import { Fragment } from 'react';
-
+import './index.css'
+import ItemListCointainer from './components/ItemListContainer/ItemListContainer.jsx';
 const App = () => {
   return (
     <Fragment>
-      <NavBar />
+      <BarraNav />
+      <ItemListCointainer/>
     </Fragment>
   );
 }

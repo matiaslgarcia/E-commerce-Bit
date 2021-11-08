@@ -1,37 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
-.container{
-    background: orangered;
-    height: 50px;
-    display: flexbox;
-    padding: 0.2rem;
+.container-navBar{
+    background: #8a9a5b;
+    height:auto;
+    color:#fff !important;
 }
-.logo{
-    cursor: pointer;
-    color: #fff;
-    font-size: 2rem;
+.navbar-light .navbar-nav .nav-link{
+    font-family: 'Zen Antique', serif;
+    color:#fff;
+    font-weight: bold;
+    
+}
+a {
+    font-family: 'Zen Antique', serif;
+    color:#fff;
+    font-weight: bold;
     text-decoration: none;
-    margin-left: 20px;
-    display: flexbox;
+    
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-}
-.navBar ul{
-    list-style: none;
-    border:0px 1px solid #fff;
-}
-.navBar ul li {
-    cursor: pointer;
-    color: #fff;
-    font-size: 1.2rem;
-    text-decoration: none;
-    float: right;
-    margin-right: 25px;
+a:hover{
+    color:#22242d;
 }
 
-  
+
+
