@@ -1,0 +1,14 @@
+.container-card{
+    width: 18rem;
+}
+.container-card:active{
+    color: #22242d;
+}
+.button-add:hover{
+    background-color: #22242d;
+    color: #fff;
+}
+
+.button-add:visited:hover{
+    background-color: #22242d;
+}

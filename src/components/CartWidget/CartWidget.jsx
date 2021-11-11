@@ -7,7 +7,7 @@ export const CartWidget = () =>{
     return (
         <Fragment>
             <Button className="btn">
-                <BsFillCartFill className="img"/>
+                <BsFillCartFill  className="img" size="18px"/>
             </Button>
         </Fragment>
     )

@@ -1,12 +1,13 @@
 import BarraNav from './components/NavBar/BarraNav.jsx';
 import { Fragment } from 'react';
 import './index.css'
-import ItemListCointainer from './components/ItemListContainer/ItemListContainer.jsx';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+
 const App = () => {
   return (
     <Fragment>
       <BarraNav />
-      <ItemListCointainer/>
+      <ItemListContainer/>
     </Fragment>
   );
 }

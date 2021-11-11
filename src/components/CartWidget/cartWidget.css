@@ -25,4 +25,11 @@
     border-color: #22242d;
 }
 
+.img{
+   color: #fff;
+}
+.img:hover{
+    color:#22242d;
+}
+
 
