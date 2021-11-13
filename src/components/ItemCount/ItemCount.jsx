@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import {Button, ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 import './itemCount.css';
 export const ItemCount = ({ stock, inicial }) => {
     // HOOK
@@ -16,7 +16,7 @@ export const ItemCount = ({ stock, inicial }) => {
         <Fragment>
             <ButtonGroup className="mb-3">
                 <Button onClick={onClickDecrementar} className="button-add">-</Button>
-                <Button className="button-add" disable>{`${number}`} </Button>
+                <Button className="button-add" disable>{number}</Button>
                 <Button onClick={onClickIncrementar} className="button-add">+</Button>
             </ButtonGroup>
         </Fragment>

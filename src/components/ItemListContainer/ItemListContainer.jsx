@@ -1,47 +1,22 @@
-import { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import './itemListContainer.css';
-import { Container } from 'react-bootstrap';
+import { Row, Container } from 'react-bootstrap';
 import { Greeting } from "../../components/Greeting/Greeting";
 import { ItemList } from "../../components/ItemList/ItemList";
-import prod1 from './img/prod1.jpg';
+import { products } from './items.js';
 
 const ItemListContainer = () => {
-    const products = [
-        {
-            id: 1,
-            img: prod1,
-            title: 'Producto 1',
-            description: 'Soy unos llaveritos',
-            price: 150.0,
-        },
-        {
-            id: 2,
-            img: prod1,
-            title: 'Producto 2',
-            description: 'Soy unos llaveritos',
-            price: 150.0,
-        },
-        {
-            id: 3,
-            img: prod1,
-            title: 'Producto 3',
-            description: 'Soy unos llaveritos',
-            price: 150.0,
-        }
-    ]
+
+    const [items, setItems] = useState([]);
     const promiseItems = () => {
         return new Promise((resolve, reject) => {
-            if (true) {
-                setTimeout(() => {
-                    resolve(products)
-                }, 2000);
-            } else {
-                reject('Algo salio mal');
-            }
+            setTimeout(() => {
+                resolve(products)
+            }, 2000);
         })
     }
     promiseItems()
-        .then((response) => console.log(response))
+        .then((response) => setItems(response))
         .catch((error) => console.log(error))
 
     return (
@@ -49,7 +24,9 @@ const ItemListContainer = () => {
             <div id="particles-js">
                 <Container className="container-main">
                     <Greeting greeting="Bienvenidos a mi E-Commerce"> </Greeting>
-                    <ItemList items={products} />
+                    <Row xs={1} md={2} lg={4} className="g-4">
+                        <ItemList items={items} />
+                    </Row>
                 </Container>
             </div>
         </Fragment>

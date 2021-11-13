@@ -1,6 +1,6 @@
 import { Fragment, React } from "react";
 import { Item } from "../../components/Item/Item";
-import { CardGroup } from 'react-bootstrap';
+import { Col, CardGroup } from 'react-bootstrap';
 
 export const ItemList = ({ items }) => {
     return (
@@ -8,9 +8,11 @@ export const ItemList = ({ items }) => {
             {
                 items.map((product) => {
                     return (
-                        <CardGroup>
-                            <Item key={product.id} product={product}/>  
-                        </CardGroup>
+                        <Col>
+                            <CardGroup>
+                                <Item key={product.id} product={product} />
+                            </CardGroup>
+                        </Col>
                     )
                 })
             }
