@@ -26,12 +26,5 @@ export const products = [
         title: 'Producto 4',
         description: 'Soy unos llaveritos',
         price: 150.0,
-    },
-    {
-        id: 5,
-        img: 'img/prod1.jpg',
-        title: 'Producto 5',
-        description: 'Soy unos llaveritos',
-        price: 150.0,
     }
 ]

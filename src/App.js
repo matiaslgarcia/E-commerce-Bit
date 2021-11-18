@@ -1,14 +1,21 @@
 import BarraNav from './components/NavBar/BarraNav.jsx';
-import { Fragment } from 'react';
+import React from 'react';
 import './index.css'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
-
+import ItemListContainer from '../src/components/Item/ItemListContainer';
+import { ItemDetailContainer } from './components/Item/ItemDetailContainer.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
-    <Fragment>
-      <BarraNav />
-      <ItemListContainer/>
-    </Fragment>
+    <div id="particles-js">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" />
+        </Routes>
+        <BarraNav />
+        <ItemListContainer />
+        <ItemDetailContainer />
+      </BrowserRouter>
+    </div>
   );
 }
 export default App;

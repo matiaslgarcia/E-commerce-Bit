@@ -1,8 +1,8 @@
-import { Fragment, React } from "react";
+import React, {Fragment} from 'react'
 import { Card, Button } from 'react-bootstrap';
 import { ItemCount } from "./ItemCount";
 
-export const Item = ({ product }) => {
+const ItemDetail = ({ product }) => {
     return (
         <Fragment>
             <Card >
@@ -29,3 +29,4 @@ export const Item = ({ product }) => {
     )
 }
 
+export default ItemDetail

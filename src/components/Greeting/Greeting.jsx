@@ -1,5 +1,7 @@
+import './greeting.css';
+
 export const Greeting = (props) => {
     return (
-        <h1> {props.greeting}</h1>
+        <h1 className="greeting-style"> {props.greeting}</h1>
     )
 }

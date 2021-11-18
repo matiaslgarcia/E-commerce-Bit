@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#particles-js{ 
+  position:absolute; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #22242d; 
+  background-image: url("https://rdjonasa.github.io/bit3D/assets/img/bitgris.png"); 
+  background-repeat: no-repeat; 
+  background-size: 15%; 
+  background-position: 50% 50%; 
+} 

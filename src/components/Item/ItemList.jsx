@@ -1,5 +1,5 @@
 import { Fragment, React } from "react";
-import { Item } from "../../components/Item/Item";
+import { Item } from "./Item";
 import { Col, CardGroup } from 'react-bootstrap';
 
 export const ItemList = ({ items }) => {
