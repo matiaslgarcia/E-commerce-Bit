@@ -12,7 +12,7 @@ const BarraNav = () => {
           <Col fluid >
             <Container>
             <Navbar className="navbar-toggler-right" >
-              <Navbar.Brand href="#home" className="text-center">
+              <Navbar.Brand  as={ Link } to="/" className="text-center">
                 <img
                   alt=""
                   src={logo}
@@ -23,11 +23,10 @@ const BarraNav = () => {
               </Navbar.Brand>
               <Link to="/">BIT 3D</Link>
               <Nav className="ms-auto navbar-nav ml-auto my-2 my-lg-0" >
-                <Nav.Link as={ Link } to="#home"> Conocenos </Nav.Link>
-                <Nav.Link as={ Link } to="#features">Servicios</Nav.Link>
-                <Nav.Link as={ Link } to="#pricing">Catalogo</Nav.Link>
-                <Nav.Link as={ Link } to="#home">Contacto</Nav.Link>
-                <Nav.Link as={ Link } to="#features">Tienda</Nav.Link>
+                <Nav.Link as={ Link } to="/catalogue">Catalogo</Nav.Link>
+                <Nav.Link as={ Link } to="/us"> Conocenos </Nav.Link>
+                <Nav.Link as={ Link } to="/services">Servicios</Nav.Link>
+                <Nav.Link as={ Link } to="/contact">Contacto</Nav.Link>
                 <CartWidget ></CartWidget>
               </Nav>
             </Navbar>

@@ -1,3 +1,5 @@
 .spinner{
     background-color: #8a9a5b;
+    display: flex;
+    margin-top: 20px;
 }

@@ -1,8 +1,12 @@
-
 .container-main{
     margin-top: 20px;
     color: #000;
     padding:10px;
     text-align: center;
-    background-color:#8a9a5b 
+    background-color:#8a9a5b ;
+    position: relative;
+    z-index: 1;
+}
+.nav-style{
+    background-color: #232617;
 }

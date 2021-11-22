@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# BIT 3D --- E-Commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BIT 3D es un e-commerce para la venta de articulos 3D , personalizables y unicos a tu gusto! 
+Los servicios que brinda son los siguientes:
+- Filtrado por categorías: tomando las categorías de la base de datos se generan filtros de productos
+- Carrito de Compras: posee una  vista completa de los items seleccionados en el carrito, su cantidad seleccionada, precio subtotal y total, y con la opción de quitar un producto seleccionado.
+- View Listado de Productos:  Vista general de Productos con Foto y detalles descriptivos mínimos.
+- View Detalles: Vista descriptiva con c/u de  los detalles del Producto seleccionado , con boton para agregar o quitar uno o mas.
+- Control de Stock: el Usuario final podra agregar los items que solo el boton permita hacerlo, realizando un control de stock en tiempo real al momento de generar la compra
 
-## Available Scripts
+## Instalacion
+1. Clonar el repositorio
+2. Posicionarse en la raiz del proyecto y ejecutar el comando
 
-In the project directory, you can run:
+###	`yarn start`
+   	
+   Para instalar todas las dependencias del proyecto
+3. Ejecute el comando
+	
+### `yarn install`
 
-### `yarn start`
+   Para ejecutar/correr el proyecto, que estare disponible en http://localhost:3000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dependencias
 
-### `yarn test`
+- Bootstrap para dar estilos a la aplicacion
+- React-Router-Dom para permitir la navegacion.
+- Reac-Icon: para utilizar iconos descriptivos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Aplicacion en funcionamiento
+![BIT-3D  en funcionamiento](https://github.com/matiaslgarcia/E-commerce-Bit/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Autor
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Matias Luciano Garcia
+2021 - Curso de React en CoderHouse

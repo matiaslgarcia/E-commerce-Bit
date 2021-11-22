@@ -1,0 +1,11 @@
+.footer{
+	background-color: #8a9a5b;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+  z-index: auto;
+  }
+  .container-footer{
+    background: #8a9a5b;
+    color:#fff !important;
+}

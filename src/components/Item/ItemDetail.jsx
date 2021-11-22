@@ -17,7 +17,7 @@ const ItemDetail = ({ product }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <ItemCount stock={5} inicial={0} />
+                    <ItemCount stock ={product.stock} inicial={0} />
                 </Card.Footer>
                 <Card.Footer>
                     <Button className="button-add">

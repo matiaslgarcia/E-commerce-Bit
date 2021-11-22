@@ -3,50 +3,46 @@ import { Row, Col, Container } from 'react-bootstrap';
 import SpinnerCharge from "../Spinner/SpinnerCharge";
 import { Greeting } from "../../components/Greeting/Greeting";
 import ItemDetail from './ItemDetail';
+import { products } from './items.js';
 import './itemDetailContainer.css';
+import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
-
-    const product = {
-        id: 1,
-        img: 'img/prod1.jpg',
-        title: 'Llavero Cheto',
-        description: 'Soy unos llaveritos',
-        price: 150.0,
-    }
+    const {id} = useParams();
     const [isLoading, setIsLoading] = useState(true)
-    const [unProd, setUnProd] = useState([]);
-
-    const promiseProduct = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(product)
-            }, 2000);
-        })
-    }
-
+    const [unProd, setUnProd] = useState({});
+   
     useEffect(() => {
+        const promiseProduct = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(products)
+                }, 2000);
+            })
+        }
         setIsLoading(true)
         promiseProduct()
-            .then((response) => setUnProd(response))
+            .then((response) => {
+                const producto = response.find(
+                    (prod) => prod.id === parseInt(id)
+                )
+                setUnProd(producto)
+            })
             .catch((error) => console.log(error))
             .finally(() => {
                 setIsLoading(false)
             })
-            // eslint-disable-next-line
-    }, [])
-    
-    return (
+    }, [id])
+
+    return isLoading ? (<SpinnerCharge />) : (
         <Fragment>
             <Row >
                 <Col>
                     <Container className="container-detail-main">
                         <Greeting greeting="Detalle del Producto" />
-                        {isLoading ? (<SpinnerCharge />) : (
-                            <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
-                                <ItemDetail product={unProd} />
-                            </Row>
-                        )}
+                        <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
+                            <ItemDetail product={unProd} />
+                        </Row>
                     </Container>
                 </Col>
             </Row>
