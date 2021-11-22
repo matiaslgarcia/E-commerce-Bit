@@ -13,7 +13,7 @@ Los servicios que brinda son los siguientes:
 2. Posicionarse en la raiz del proyecto y ejecutar el comando
 
 ###	`yarn start`
-   	
+
    Para instalar todas las dependencias del proyecto
 3. Ejecute el comando
 	
@@ -30,7 +30,7 @@ Los servicios que brinda son los siguientes:
 
 
 ## Aplicacion en funcionamiento
-![BIT-3D  en funcionamiento](https://github.com/matiaslgarcia/E-commerce-Bit/
+![BIT-3D  en funcionamiento](https://github.com/matiaslgarcia/E-commerce-Bit/blob/main/e-commerce-bit3d.gif)
 
 ### Autor
 
