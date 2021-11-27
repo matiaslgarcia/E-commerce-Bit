@@ -1,8 +1,9 @@
-import React, {Fragment} from 'react'
-import { Card, Button } from 'react-bootstrap';
+import React, { Fragment } from 'react'
+import { Card, Button , ButtonGroup} from 'react-bootstrap';
 import { ItemCount } from "./ItemCount";
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product, onAdd, goCart }) => {
     return (
         <Fragment>
             <Card >
@@ -17,12 +18,21 @@ const ItemDetail = ({ product }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <ItemCount stock ={product.stock} inicial={0} />
-                </Card.Footer>
-                <Card.Footer>
-                    <Button className="button-add">
-                        Agregar al Carrito
-                    </Button>
+                    {goCart ? (
+                        <Fragment>
+                            <Link to="/cart">
+                                <ButtonGroup className="mb-3 d-flex">
+                                    <Button className="button-add justify-content">
+                                        Finalizar Compra
+                                    </Button>
+                                </ButtonGroup>
+                            </Link>
+                        </Fragment>
+                    ) : (
+                        <Fragment>
+                            <ItemCount stock={product.stock} inicial={0} onAdd={onAdd} />
+                        </Fragment>
+                    )}
                 </Card.Footer>
             </Card>
         </Fragment>

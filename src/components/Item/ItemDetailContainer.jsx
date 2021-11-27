@@ -9,9 +9,14 @@ import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
     const {id} = useParams();
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
+    const [goCart, setGoCart] = useState(false);
     const [unProd, setUnProd] = useState({});
    
+    const onAdd = (cant) => {
+       console.log({ ...unProd, quantify : cant});
+       setGoCart(true);
+    }
     useEffect(() => {
         const promiseProduct = () => {
             return new Promise((resolve, reject) => {
@@ -41,7 +46,7 @@ export const ItemDetailContainer = () => {
                     <Container className="container-detail-main">
                         <Greeting greeting="Detalle del Producto" />
                         <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
-                            <ItemDetail product={unProd} />
+                            <ItemDetail product={unProd} onAdd={onAdd} goCart={goCart}/>
                         </Row>
                     </Container>
                 </Col>
