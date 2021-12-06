@@ -27,4 +27,23 @@ a:hover{
     color:#22242d;
 }
 
+.clear-cart{
+    font-family: 'Zen Antique', serif;
+    color:#fff;
+    background-color:#22242d;
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin:0 0 5px 0;
+}
 
+.delete-item{
+    background-color: #dc3545;
+    text-decoration: none;
+    border: none;
+    width: auto;
+    cursor:pointer;
+}
+
+.badge{
+    cursor: pointer;
+}

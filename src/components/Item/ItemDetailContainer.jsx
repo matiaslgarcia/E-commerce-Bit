@@ -6,17 +6,21 @@ import ItemDetail from './ItemDetail';
 import { products } from './items.js';
 import './itemDetailContainer.css';
 import { useParams } from "react-router-dom";
+import { useAddToCart } from '../../Context/CartContext';
 
 export const ItemDetailContainer = () => {
     const {id} = useParams();
     const [isLoading, setIsLoading] = useState(true);
     const [goCart, setGoCart] = useState(false);
     const [unProd, setUnProd] = useState({});
+
+    const addToCart = useAddToCart()
    
     const onAdd = (cant) => {
-       console.log({ ...unProd, quantify : cant});
+       addToCart(unProd, cant)
        setGoCart(true);
     }
+
     useEffect(() => {
         const promiseProduct = () => {
             return new Promise((resolve, reject) => {

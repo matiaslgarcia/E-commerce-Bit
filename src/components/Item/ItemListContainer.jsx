@@ -26,7 +26,7 @@ const ItemListContainer = () => {
                 const filtrar = response.filter((product) => product.categoryId === `${categoryId}`);
                 categoryId === undefined ? setItems(response) : setItems(filtrar);
             })
-            .catch((error) => console.log(error))
+            .catch((error) => console.log())
             .finally(() => {
                 setIsLoading(false)
             })

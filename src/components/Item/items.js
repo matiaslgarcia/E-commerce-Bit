@@ -7,6 +7,7 @@ export const products = [
         price: 150.0,
         stock: 10,
         categoryId: 'llaveros',
+        cartCount: 0,
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ export const products = [
         price: 250.0,
         stock: 20,
         categoryId: 'llaveros',
+        cartCount: 0,
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ export const products = [
         stock: 20,
         price: 100.0,
         categoryId: 'llaveros',
+        cartCount: 0,
     },
     {
         id: 4,
@@ -34,6 +37,7 @@ export const products = [
         stock: 50,
         price: 100.0,
         categoryId: 'llaveros',
+        cartCount: 0,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ export const products = [
         stock: 5,
         price: 300.0,
         categoryId: 'muniecos',
+        cartCount: 0,
     },
     {
         id: 6,
@@ -52,6 +57,7 @@ export const products = [
         stock: 10,
         price: 500.0,
         categoryId: 'muniecos',
+        cartCount: 0,
     },
     {
         id: 7,
@@ -61,6 +67,7 @@ export const products = [
         stock: 5,
         price: 500.0,
         categoryId: 'muniecos',
+        cartCount: 0,
     },
     {
         id: 8,
@@ -70,6 +77,7 @@ export const products = [
         stock: 20,
         price: 500.0,
         categoryId: 'muniecos',
+        cartCount: 0,
     },
     {
         id: 9,
@@ -79,6 +87,7 @@ export const products = [
         stock: 10,
         price: 800.0,
         categoryId: 'macetas',
+        cartCount: 0,
     },
     {
         id: 10,
@@ -88,6 +97,7 @@ export const products = [
         stock: 5,
         price: 700.0,
         categoryId: 'macetas',
+        cartCount: 0,
     },
     {
         id: 11,
@@ -97,6 +107,7 @@ export const products = [
         stock: 15,
         price: 700.0,
         categoryId: 'macetas',
+        cartCount: 0,
     },
     {
         id: 12,
@@ -106,5 +117,6 @@ export const products = [
         stock: 10,
         price: 1500.0,
         categoryId: 'macetas',
+        cartCount: 0,
     },
 ]
