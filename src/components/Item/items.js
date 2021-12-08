@@ -57,7 +57,6 @@ export const products = [
         stock: 10,
         price: 500.0,
         categoryId: 'muniecos',
-        cartCount: 0,
     },
     {
         id: 7,
@@ -67,7 +66,6 @@ export const products = [
         stock: 5,
         price: 500.0,
         categoryId: 'muniecos',
-        cartCount: 0,
     },
     {
         id: 8,
@@ -77,7 +75,6 @@ export const products = [
         stock: 20,
         price: 500.0,
         categoryId: 'muniecos',
-        cartCount: 0,
     },
     {
         id: 9,
@@ -87,7 +84,6 @@ export const products = [
         stock: 10,
         price: 800.0,
         categoryId: 'macetas',
-        cartCount: 0,
     },
     {
         id: 10,
@@ -97,7 +93,6 @@ export const products = [
         stock: 5,
         price: 700.0,
         categoryId: 'macetas',
-        cartCount: 0,
     },
     {
         id: 11,
@@ -107,7 +102,6 @@ export const products = [
         stock: 15,
         price: 700.0,
         categoryId: 'macetas',
-        cartCount: 0,
     },
     {
         id: 12,
@@ -117,6 +111,5 @@ export const products = [
         stock: 10,
         price: 1500.0,
         categoryId: 'macetas',
-        cartCount: 0,
     },
 ]
