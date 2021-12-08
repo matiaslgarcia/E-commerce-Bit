@@ -28,4 +28,13 @@
     color:#22242d;
 }
 
+.itemCartWidget{
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    background-color:#22242d;
+    border-color: #22242d;
+    border-radius: 20px;
+    color: white;
+    vertical-align: bottom;
+}
 
