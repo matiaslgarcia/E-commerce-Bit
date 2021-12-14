@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDYkcoW2YJuX0-7Y5XsBw5V4Jtpiy9v7ws",
+  authDomain: "bit-3d.firebaseapp.com",
+  projectId: "bit-3d",
+  storageBucket: "bit-3d.appspot.com",
+  messagingSenderId: "285731224037",
+  appId: "1:285731224037:web:3d5065c7e8e058c578970c"
+};
+
+//inicializador  de firebase
+initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

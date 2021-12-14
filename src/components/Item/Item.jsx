@@ -2,19 +2,19 @@ import { Fragment, React } from "react";
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export const Item = ({ product }) => {
+export const Item = ({  price, img, id, description, title }) => {
     return (
         <Fragment>
-            <Link to={`/catalogue/item/${product.id}`}>
+            <Link to={`/catalogue/item/${id}`}>
                 <Card >
-                    <Card.Img variant="top" src={product.img} />
+                    <Card.Img variant="top" src={img} />
                     <Card.Body>
-                        <Card.Title>{product.title}</Card.Title>
+                        <Card.Title>{title}</Card.Title>
                         <Card.Text>
-                            {product.description}
+                            {description}
                         </Card.Text>
                         <Card.Text>
-                            $ {product.price}
+                            $ {price}
                         </Card.Text>
                     </Card.Body>
                 </Card>

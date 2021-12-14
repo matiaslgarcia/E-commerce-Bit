@@ -10,7 +10,7 @@ export const ItemList = ({ items }) => {
                     return (
                         <Col>
                             <CardGroup>
-                                <Item key={product.id} product={product} />
+                                <Item key={product.id} {...product} />
                             </CardGroup>
                         </Col>
                     )
