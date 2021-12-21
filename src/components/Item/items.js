@@ -1,6 +1,5 @@
 export const products = [
     {
-        id: 1,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588711/Bit%203D/llavero3_kyesvg.png',
         title: 'Llavero Rana',
         description: 'Llavero con diseño a ranas',
@@ -10,7 +9,6 @@ export const products = [
         cartCount: 0,
     },
     {
-        id: 2,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588711/Bit%203D/llavero1_qpzxvx.png',
         title: 'Llavero Dinosaurio',
         description: 'Llavero blanco con diseño a dinosaurio',
@@ -20,7 +18,6 @@ export const products = [
         cartCount: 0,
     },
     {
-        id: 3,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588712/Bit%203D/llavero4_vr1lxc.png',
         title: 'Llavero Nene',
         description: 'Llavero con diseño a un nene',
@@ -30,7 +27,6 @@ export const products = [
         cartCount: 0,
     },
     {
-        id: 4,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588712/Bit%203D/llavero2_adijmx.png',
         title: 'LLaveros Varios',
         description: 'LLaveritos con diseños variados',
@@ -40,7 +36,6 @@ export const products = [
         cartCount: 0,
     },
     {
-        id: 5,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588714/Bit%203D/mu%C3%B1eco4_wc20ng.png',
         title: 'Muñecos Chibis Personalizados',
         description: 'Muñecos Chibi Personalizables',
@@ -50,7 +45,6 @@ export const products = [
         cartCount: 0,
     },
     {
-        id: 6,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588714/Bit%203D/mu%C3%B1eco2_n3vwlx.png',
         title: 'Muñeco Chibi Capitan America',
         description: 'Muñeco Chibi Capitan America, para coleccion',
@@ -59,7 +53,6 @@ export const products = [
         categoryId: 'muniecos',
     },
     {
-        id: 7,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588714/Bit%203D/mu%C3%B1eco3_ghcbac.png',
         title: 'Muñeco Naruto',
         description: 'Muñeco Naruto Shipodden personalizable',
@@ -68,7 +61,6 @@ export const products = [
         categoryId: 'muniecos',
     },
     {
-        id: 8,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588713/Bit%203D/mu%C3%B1eco1_wf8lnv.png',
         title: 'Muñeco Chibi Thor',
         description: 'Muñeco Chibi Thor, para coleccion',
@@ -77,7 +69,6 @@ export const products = [
         categoryId: 'muniecos',
     },
     {
-        id: 9,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588713/Bit%203D/maceta3_fdatti.png',
         title: 'Macena La Ferina',
         description: 'Maceta Modelo La Ferina para decorar tu casa',
@@ -86,7 +77,6 @@ export const products = [
         categoryId: 'macetas',
     },
     {
-        id: 10,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588712/Bit%203D/maceta1_h8a29y.png',
         title: 'Maceta Deco Perrito',
         description: 'Maceta Deco perrito para decorar tu casa',
@@ -95,7 +85,6 @@ export const products = [
         categoryId: 'macetas',
     },
     {
-        id: 11,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588712/Bit%203D/maceta2_oahpts.png',
         title: 'Maceta Deco Perrito',
         description: 'Maceta Deco perrito para decorar tu casa',
@@ -104,7 +93,6 @@ export const products = [
         categoryId: 'macetas',
     },
     {
-        id: 12,
         img: 'https://res.cloudinary.com/dzrb2apcj/image/upload/v1637588713/Bit%203D/maceta4_lh0yew.png',
         title: 'Maceta Buda',
         description: 'Maceta Buda, para decorar tu casa',

@@ -6,10 +6,10 @@ import SpinnerCharge from "../Spinner/SpinnerCharge";
 import { ItemList } from "./ItemList";
 // import { products } from "./items.js";
 import { Link, useParams } from "react-router-dom";
-import { getFirestore , collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams();
+  const { id } = useParams();
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -20,22 +20,19 @@ const ItemListContainer = () => {
     getDocs(ref)
       .then((snapShot) => {
         const product = snapShot.docs.map((doc) => {
-        console.log(doc.data())
           return {
-            categoryId: doc.id,
+            id: doc.id,
             ...doc.data(),
           };
         });
-        const filtrar = product.filter(
-          (prod) => prod.categoryId === `${categoryId}`
-        );
-        categoryId === undefined ? setItems(product) : setItems(filtrar);
+        const filtrar = product.filter((prod) => prod.categoryId === `${id}`);
+        id === undefined ? setItems(product) : setItems(filtrar);
       })
       .catch((error) => console.log(error))
       .finally(() => {
         setIsLoading(false);
       });
-  }, [categoryId]);
+  }, [id]);
 
   return isLoading ? (
     <SpinnerCharge />

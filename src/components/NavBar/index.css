@@ -34,6 +34,8 @@ a:hover{
     border-radius: 20px;
     padding: 5px 5px;
     margin:0 0 5px 0;
+    display: flex;
+    justify-items: end;
 }
 
 .delete-item{
@@ -94,5 +96,10 @@ a:hover{
 .container-detail-main{
     color: #000;
     text-align: center;
+    background-color:#8a9a5b;
+}
+
+.container-detail-orden{
+    color: #000;
     background-color:#8a9a5b;
 }

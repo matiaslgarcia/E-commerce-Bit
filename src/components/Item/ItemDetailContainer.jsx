@@ -6,7 +6,7 @@ import ItemDetail from "./ItemDetail";
 import "./itemDetailContainer.css";
 import { useParams } from "react-router-dom";
 import { useAddToCart } from "../../Context/CartContext";
-import { getFirestore, collection, getDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -24,27 +24,20 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     setIsLoading(true);
     const db = getFirestore();
-    const ref = collection(db, "products", id);
-    getDoc(ref)
+    const ref = collection(db, "products");
+    getDocs(ref)
       .then((snapShot) => {
-        if (snapShot.exists()) {
-          setUnProd({
-            id: snapShot.id,
-            ...snapShot.data(),
-          });
-        }
+        const prodFind = snapShot.docs.map((aProd) => ({
+          id: aProd.id,
+          ...aProd.data(),
+        }));
+        setUnProd(prodFind.find((prod) => prod.id === id));
       })
       .catch((error) => console.log(error))
       .finally(() => {
         setIsLoading(false);
       });
   }, [id]);
-  // .then((response) => {
-  //     const producto = response.find(
-  //         (prod) => prod.id === parseInt(id)
-  //     )
-  //     setUnProd(producto)
-  // })
 
   return isLoading ? (
     <SpinnerCharge />
