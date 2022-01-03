@@ -30,7 +30,7 @@ Los servicios que brinda son los siguientes:
 
 
 ## Aplicacion en funcionamiento
-![BIT-3D  en funcionamiento](https://github.com/matiaslgarcia/E-commerce-Bit/blob/main/e-commerce-bit3d.gif)
+![BIT-3D  en funcionamiento](https://github.com/matiaslgarcia/E-commerce-Bit/blob/main/e-commerce-final-bit3d.gif)
 
 ### Autor
 
