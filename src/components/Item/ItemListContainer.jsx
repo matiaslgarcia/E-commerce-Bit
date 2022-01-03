@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const { id } = useParams();
+  const { categoryId } = useParams();
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,14 +25,14 @@ const ItemListContainer = () => {
             ...doc.data(),
           };
         });
-        const filtrar = product.filter((prod) => prod.categoryId === `${id}`);
-        id === undefined ? setItems(product) : setItems(filtrar);
+        const filtrar = product.filter((prod) => prod.categoryId === `${categoryId}`);
+        categoryId === undefined ? setItems(product) : setItems(filtrar);
       })
       .catch((error) => console.log(error))
       .finally(() => {
         setIsLoading(false);
       });
-  }, [id]);
+  }, [categoryId]);
 
   return isLoading ? (
     <SpinnerCharge />
