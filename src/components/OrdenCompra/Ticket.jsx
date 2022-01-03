@@ -4,7 +4,6 @@ import "./index.css";
 
 const Ticket = ({ ord }) => {
   const productName = ord.items.map((i) => i.title);
-  const { buyer } = ord;
   return (
     <Fragment>
       <Container className="container-detail-orden2">
@@ -33,7 +32,7 @@ const Ticket = ({ ord }) => {
                 <InputGroup.Text>
                   <b>Email:</b>
                 </InputGroup.Text>
-                <ListGroup.Item>{buyer}</ListGroup.Item>
+                <ListGroup.Item>{ord.buyer.email}</ListGroup.Item>
               </InputGroup>
             </ListGroup>
           </Col>

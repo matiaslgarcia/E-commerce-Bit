@@ -5,7 +5,6 @@ export const CartContext = React.createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState("");
-  const [prueba, setPrueba] = useState("");
   const addItem = (item, cantidad) => {
     total();
     if (isInCart(item) === -1) {
@@ -43,9 +42,6 @@ export const CartProvider = ({ children }) => {
     setUser(form);
   };
 
-  const getEmail = (a) => {
-    setPrueba(a);
-  };
   return (
     <CartContext.Provider
       value={{
@@ -57,8 +53,6 @@ export const CartProvider = ({ children }) => {
         itemsCartWidget,
         getUser,
         user,
-        getEmail,
-        prueba,
       }}
     >
       {children}

@@ -6,13 +6,14 @@ import "./index.css";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import CartDetail from "./CartDetail";
 import Orden from "../../components/OrdenCompra/Orden";
-// import CarritoVacio from "./CarritoVacio";
+import CarritoVacio from "./CarritoVacio";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, total, getUser, user } = useContext(CartContext);
-
+  const { cart, total, getUser } = useContext(CartContext);
+  let navigate = useNavigate();
   const clear = useClearCart();
-  const [ticket, setTicket] = useState(true);
+  const [ticket, setTicket] = useState(false);
   const [form, getForm] = useState({
     nombreCompleto: "",
     celular: "",
@@ -25,32 +26,33 @@ const Cart = () => {
       ...form,
       [name]: value,
     });
-    console.log(e.value);
   };
 
   const date = new Date();
   const finalizar = () => {
     getUser(form);
+    setTicket(true);
     const db = getFirestore();
     const ref = collection(db, "orden");
     const newOrden = {
-      buyer: form.email,
-      // buyer: user,
+      buyer: {
+        email: form.email,
+        nombreCompleto: form.nombreCompleto,
+        celular: form.celular,
+      },
       items: cart,
       date: date,
       total: total(),
     };
     addDoc(ref, newOrden);
-    setTicket(false);
+    navigate("/orden");
     clear();
   };
-
-  // if (total() === 0) {
-  //   return <CarritoVacio />;
-  // } else {
   return (
     <Fragment>
-      {ticket ? (
+      {total() === 0 ? (
+        <CarritoVacio />
+      ) : (
         <Fragment>
           <Row>
             <Col>
@@ -72,62 +74,63 @@ const Cart = () => {
               </Container>
             </Col>
           </Row>
-          <Container className="container-detail-orden">
-            <Row className="mb-2">
-              <Col className="pt-4">
-                <Form method="POST" onSubmit={finalizar}>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Nombre Completo</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="nombreCompleto"
-                      placeholder="Ingrese Su Nombre y Apellido"
-                      onChange={llenarForm}
-                    />
+          {!ticket ? (
+            <Container className="container-detail-orden">
+              <Row className="mb-2">
+                <Col className="pt-4">
+                  <Form method="POST" onSubmit={finalizar}>
                     <Form.Group className="mb-3">
-                      <Form.Label>Celular</Form.Label>
+                      <Form.Label>Nombre Completo</Form.Label>
                       <Form.Control
                         type="text"
-                        name="celular"
-                        placeholder="Ingrese Sucelular"
+                        name="nombreCompleto"
+                        placeholder="Ingrese Su Nombre y Apellido"
+                        onChange={llenarForm}
+                      />
+                      <Form.Group className="mb-3">
+                        <Form.Label>Celular</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="celular"
+                          placeholder="Ingrese Sucelular"
+                          onChange={llenarForm}
+                        />
+                      </Form.Group>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Correo Electronico</Form.Label>
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="Ingrese su E-mail"
                         onChange={llenarForm}
                       />
                     </Form.Group>
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Correo Electronico</Form.Label>
-                    <Form.Control
-                      type="email"
-                      name="email"
-                      placeholder="Ingrese su E-mail"
-                      onChange={llenarForm}
-                    />
-                  </Form.Group>
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    className="clear-cart"
-                    disabled={
-                      cart?.length === 0 ||
-                      form.nombreCompleto === "" ||
-                      form.email === ""
-                    }
-                  >
-                    Finalizar Compra
-                  </Button>
-                </Form>
-              </Col>
-            </Row>
-          </Container>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <Orden />
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      className="clear-cart"
+                      disabled={
+                        cart?.length === 0 ||
+                        form.nombreCompleto === "" ||
+                        form.email === ""
+                      }
+                    >
+                      Finalizar Compra
+                    </Button>
+                  </Form>
+                </Col>
+              </Row>
+            </Container>
+          ) : (
+            <Fragment>
+              <Orden />
+            </Fragment>
+          )}
         </Fragment>
       )}
     </Fragment>
   );
 };
-// };
 
 export default Cart;

@@ -8,6 +8,7 @@ import { Catalogo } from "./components/Catalogo/Catalogo.jsx";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Footer from "./components/Footer/Footer.jsx";
 import { CartProvider } from "./Context/CartContext.jsx";
+import Orden from "./components/OrdenCompra/Orden.jsx";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
               element={<ItemDetailContainer />}
             />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/orden" element={<Orden/>} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>

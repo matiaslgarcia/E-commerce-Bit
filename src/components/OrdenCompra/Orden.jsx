@@ -8,7 +8,6 @@ import {
   orderBy,
   getDocs,
 } from "firebase/firestore";
-import SpinnerCharge from "../Spinner/SpinnerCharge";
 import Ticket from "./Ticket";
 import { Greeting } from "../../components/Greeting/Greeting";
 import "./index.css";
@@ -22,7 +21,6 @@ const Orden = () => {
     const ref = query(collection(db, "orden"), orderBy("date"));
     getDocs(ref).then((snapShot) => {
       const orden = snapShot.docs.map((doc) => {
-        // getEmail(doc.data().buyer)
         const data = doc.data();
         const { date } = data;
         const fecha = new Date(date.seconds * 1000);
@@ -36,13 +34,13 @@ const Orden = () => {
           date: normalizeDate,
         };
       });
-      setOrden(orden.filter((x) => x.buyer === email));
+      setOrden(orden.filter((x) => x.buyer.email === email));
     });
   }, [email]);
   return (
     <Fragment>
-      {orden?.length === 0 ? (
-        <SpinnerCharge />
+      {orden.length === 0 ? (
+        <Greeting greeting="Aun No tienes Ordenes de Compras" />
       ) : (
         <Fragment>
           <Greeting greeting="Tus Tickets" />
